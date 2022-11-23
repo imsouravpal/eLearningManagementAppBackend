@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "ad893355-e64b-4c3b-90a9-1f80671a098a",
+		"name": "LMS-H2 DataBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getall courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1.0/lms/courses/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1.0",
+						"lms",
+						"courses",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1.0/lms/courses/info/sbt1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1.0",
+						"lms",
+						"courses",
+						"info",
+						"sbt1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseId\": \"sbt1\",\r\n    \"courseName\": \"Spring boot for beginners\",\r\n    \"courseDuration\": 24,\r\n    \"courseDescription\": \"Complete Spring boot coursew for Beginners\",\r\n    \"technology\": \"Java\",\r\n    \"lunchUrl\": \"hhtps://springboot.io/learn/beginners\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1.0/lms/courses/add/SpringBoot Beginners",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1.0",
+						"lms",
+						"courses",
+						"add",
+						"SpringBoot Beginners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register Course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"bidhanpal\",\r\n    \"firstName\": \"Bidhan\",\r\n    \"lastName\": \"Pal\",\r\n    \"password\": \"password3\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1.0/lms/company/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1.0",
+						"lms",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1.0/lms/courses/delete/sbt1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1.0",
+						"lms",
+						"courses",
+						"delete",
+						"sbt1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
